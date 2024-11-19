@@ -22,7 +22,7 @@ const AboutMe = ({ isActive }) => {
           opacity: "100%",
         }}
         transition={{ duration: 1, delay: 1 }}
-        className="mx-auto order-2 xl:order-none text-white p-6 rounded-lg shadow-lg xl:block hidden" // xl:block for large screens
+        className="mx-auto order-2 xl:order-none text-white p-6 rounded-lg  shadow-2xl xl:block hidden" // xl:block for large screens
       >
         <div className="flex items-center space-x-4">
           <FaUser className="text-4xl text-indigo-600" /> {/* Icon */}

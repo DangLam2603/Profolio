@@ -1,6 +1,6 @@
 import React from "react";
 
-const Skills = () => {
+const Projects = () => {
   return (
     <section className="h-full">
       <div className="container mx-auto">
@@ -12,4 +12,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default Projects;

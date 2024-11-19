@@ -16,7 +16,7 @@ const Photo = ({ isActive }) => {
         className="relative w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] z-10 xl:block hidden overflow-hidden rounded-full"
       >
         <Image
-          src="/assets/photo.jpg"
+          src="/assets/photo.png"
           sizes="2xl"
           priority
           quality={100}
@@ -63,7 +63,7 @@ const Photo = ({ isActive }) => {
         className="relative w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] z-10 xl:hidden block overflow-hidden rounded-full"
       >
         <Image
-          src="/assets/photo.jpg"
+          src="/assets/photo.png"
           sizes="2xl"
           priority
           quality={100}
