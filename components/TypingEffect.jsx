@@ -37,7 +37,7 @@ const TypingHeader = () => {
   const [firstLine, secondLine] = displayText.split("\n");
 
   return (
-    <h1 className="h-[200px] h1 mb-6">
+    <h1 className="h1 mb-6">
       {isDelaying ? (
         ""
       ) : (

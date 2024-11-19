@@ -8,17 +8,44 @@ const Photo = () => {
       <motion.div
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 0.5, delay: 1, ease: "easeIn" }}
+        transition={{ duration: 0.5, delay: 1, ease: "easeInOut" }}
+        className="relative"
       >
-        <div className="relative w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten">
+        {/* Circle and Image */}
+        <div className="relative w-[298px] h-[298px] xl:w-[498px] xl:h-[498px]">
           <Image
             src="/assets/photo.jpg"
             priority
             quality={100}
             fill
             alt="photo"
-            className="rounded-full object-cover object-center"
+            className="rounded-full object-cover object-center border-4 border-transparent"
           />
+          <motion.svg
+            className="absolute top-0 left-0 w-full h-full"
+            fill="transparent"
+            viewBox="0 0 506 506"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <motion.circle
+              cx="253"
+              cy="253"
+              r="250"
+              stroke="#00ff99"
+              strokeWidth="4"
+              strokeLinecap="round"
+              initial={{ strokeDasharray: "24 10 0 0" }}
+              animate={{
+                strokeDasharray: ["15 120 25 25", "16 25 92 72", "4 250 22 22"],
+                rotate: [0, 360],
+              }}
+              transition={{
+                duration: 20,
+                repeat: Infinity,
+                repeatType: "reverse",
+              }}
+            />
+          </motion.svg>
         </div>
       </motion.div>
     </div>
