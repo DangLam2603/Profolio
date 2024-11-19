@@ -1,10 +1,19 @@
 /* eslint-disable react/no-unescaped-entities */
+"use client";
 import Photo from "@/components/Photo";
 import Social from "@/components/Social";
 import TypingHeader from "@/components/TypingEffect";
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
 export default function HomePage() {
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/assets/DangLam_CV.pdf";
+    link.download = "DangLam_CV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   return (
     <section className="h-full">
       <div className="container mx-auto">
@@ -24,7 +33,10 @@ export default function HomePage() {
               projects!
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8 ">
-              <Button className="border border-[#00ff99] bg-transparent text-accent hover:text-white flex items-center gap-2">
+              <Button
+                onClick={handleDownload}
+                className="border border-[#00ff99] bg-transparent text-accent hover:text-white flex items-center gap-2"
+              >
                 <span>Download CV</span>
                 <FiDownload />
               </Button>
