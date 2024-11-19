@@ -78,7 +78,7 @@ const AboutMe = ({ isActive }) => {
           <FaUser className="text-4xl text-indigo-600" /> {/* Icon */}
           <h1 className="text-3xl font-semibold text-white-800">About Me</h1>
         </div>
-        <p className="mt-4 text-lg text-white whitespace-pre-line">
+        <p className="mt-4 text-lg mb-6 text-white whitespace-pre-line">
           Hi, I’m Dang! I’m passionate about building software that makes a real
           difference in people’s lives. I’m currently studying Software
           Engineering at FPT University, and I’m excited to apply what I’ve
@@ -91,7 +91,7 @@ const AboutMe = ({ isActive }) => {
           creating innovative solutions that tackle tough challenges and help
           shape the future of tech.
         </p>
-        <div className="flex flex-col  xl:flex-row items-center gap-8">
+        <div className="flex flex-col xl:flex-row gap-8">
           <Button
             onClick={handleDownload}
             className="border border-[#00ff99] bg-transparent text-accent hover:text-white flex items-center gap-2"
@@ -100,19 +100,19 @@ const AboutMe = ({ isActive }) => {
             <span>Download CV</span>
             <FaDownload />
           </Button>
-        </div>
-        <div className="mt-6 flex items-center space-x-4">
-          <ul className="flex space-x-3">
-            <li className="bg-green-500 text-white px-3 py-1 rounded-full">
-              ReactJS
-            </li>
-            <li className="bg-green-500 text-white px-3 py-1 rounded-full">
-              AWS
-            </li>
-            <li className="bg-green-500 text-white px-3 py-1 rounded-full">
-              .NET
-            </li>
-          </ul>
+          <div className="mt-6 flex items-center space-x-4">
+            <ul className="flex space-x-3">
+              <li className="bg-green-500 text-white px-3 py-1 rounded-full">
+                ReactJS
+              </li>
+              <li className="bg-green-500 text-white px-3 py-1 rounded-full">
+                AWS
+              </li>
+              <li className="bg-green-500 text-white px-3 py-1 rounded-full">
+                .NET
+              </li>
+            </ul>
+          </div>
         </div>
       </motion.div>
     </>
