@@ -6,12 +6,27 @@ import { CiMenuFries } from "react-icons/ci";
 import { useState } from "react";
 
 const links = [
-  { name: "Home", path: "/" },
-  { name: "Services", path: "/service" },
-  { name: "Resume", path: "/resume" },
-  { name: "Work", path: "/work" },
-  { name: "Contact", path: "/contact" },
-  { name: "Blog", path: "/blog" },
+  {
+    name: "Home",
+    path: "/",
+  },
+  {
+    name: "Skills",
+    path: "/skills",
+  },
+  {
+    name: "Resume",
+    path: "/resume",
+  },
+  {
+    name: "Work",
+    path: "/work",
+  },
+
+  {
+    name: "Blog",
+    path: "/blog",
+  },
 ];
 
 const MobileNav = () => {
