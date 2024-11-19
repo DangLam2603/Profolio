@@ -12,7 +12,7 @@ const Photo = ({ isActive }) => {
           x: isActive ? "-140%" : "0%", // Apply isActive only for large screens
           opacity: "100%",
         }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 1, delay: isActive ? 0.3 : 1.5 }}
         className="relative w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] z-10 xl:block hidden overflow-hidden rounded-full"
       >
         <Image
