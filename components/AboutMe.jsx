@@ -91,6 +91,16 @@ const AboutMe = ({ isActive }) => {
           creating innovative solutions that tackle tough challenges and help
           shape the future of tech.
         </p>
+        <div className="flex flex-col  xl:flex-row items-center gap-8">
+          <Button
+            onClick={handleDownload}
+            className="border border-[#00ff99] bg-transparent text-accent hover:text-white flex items-center gap-2"
+            aria-label="Learn more about me"
+          >
+            <span>Download CV</span>
+            <FaDownload />
+          </Button>
+        </div>
         <div className="mt-6 flex items-center space-x-4">
           <ul className="flex space-x-3">
             <li className="bg-green-500 text-white px-3 py-1 rounded-full">
