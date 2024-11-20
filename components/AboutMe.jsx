@@ -52,13 +52,16 @@ const AboutMe = ({ isActive }) => {
         <div className="mt-6 flex items-center space-x-4">
           <ul className="flex space-x-3">
             <li className="bg-green-500 text-white px-3 py-1 rounded-full">
-              ReactJS
+              .NET
             </li>
             <li className="bg-green-500 text-white px-3 py-1 rounded-full">
               AWS
             </li>
             <li className="bg-green-500 text-white px-3 py-1 rounded-full">
-              .NET
+              React
+            </li>
+            <li className="bg-green-500 text-white px-3 py-1 rounded-full">
+              Database
             </li>
           </ul>
         </div>

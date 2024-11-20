@@ -5,7 +5,7 @@ const TypingHeader = () => {
   const [displayText, setDisplayText] = useState("");
   const [isDelaying, setIsDelaying] = useState(true);
   const [isTyping, setIsTyping] = useState(false);
-  const fullText = "Hello I'm\nDang Lam";
+  const fullText = "Hello, I'm\nDang Lam!";
 
   useEffect(() => {
     const delayTimer = setTimeout(() => {

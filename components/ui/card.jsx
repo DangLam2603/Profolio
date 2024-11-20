@@ -1,50 +1,102 @@
-import * as React from "react"
+/* eslint-disable @next/next/no-img-element */
+"use client";
 
-import { cn } from "@/lib/utils"
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { FaUsers } from "react-icons/fa";
+import { motion } from "framer-motion"; // Correct import
+import { FaCalendarCheck } from "react-icons/fa";
+export default function ProjectCard({
+  isRight,
+  date,
+  title,
+  content,
+  teamSize,
+  imgSrc,
+  imgAlt,
+  tags = [],
+  links = [],
+}) {
+  return (
+    <motion.div
+      className="w-full py-6"
+      initial={{ opacity: 0 }} // Start invisible
+      animate={{ opacity: 1 }} // Fade in to visible
+      transition={{ duration: 0.5, delay: 1, ease: "easeInOut" }} // Fade-in effect
+    >
+      <div
+        className={`
+          w-full 
+          max-w-full 
+          flex flex-col xl:flex-row 
+          shadow-2xl 
+          rounded-xl 
+          overflow-hidden 
+          transform transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-3xl
+          ${isRight ? "xl:flex-row-reverse" : ""}
+        `}
+      >
+        {/* Image Section */}
+        {imgSrc && (
+          <div className="flex items-center justify-center">
+            <img
+              src={imgSrc}
+              alt={imgAlt || title}
+              className=" h-[24rem] object-contain 
+                         opacity-90 hover:opacity-100 transition-opacity duration-300"
+            />
+          </div>
+        )}
 
-const Card = React.forwardRef(({ className, ...props }, ref) => (
-  <div
-    ref={ref}
-    className={cn("rounded-xl border bg-card text-card-foreground shadow", className)}
-    {...props} />
-))
-Card.displayName = "Card"
+        {/* Content Section */}
+        <div className="w-full p-6 flex flex-col justify-center">
+          <div className="flex items-center justify-between gap-2">
+            <div className="w-full">
+              <h2 className="text-3xl font-bold mb-4 text-white">{title}</h2>
+              {tags.length > 0 && (
+                <div className=" flex flex-wrap gap-2 mb-4">
+                  {tags.map((tag, index) => (
+                    <Badge
+                      key={index}
+                      className="bg-gray-500 text-white px-3 py-1 rounded-full shadow 
+                             hover:bg-slate-700 transition-colors cursor-pointer"
+                    >
+                      {tag}
+                    </Badge>
+                  ))}
+                </div>
+              )}
+            </div>
+            <div className="w-[50%] flex items-center justify-end gap-2 pr-3">
+              <FaCalendarCheck scale={1.5} />
+              {date}
+            </div>
+          </div>
 
-const CardHeader = React.forwardRef(({ className, ...props }, ref) => (
-  <div
-    ref={ref}
-    className={cn("flex flex-col space-y-1.5 p-6", className)}
-    {...props} />
-))
-CardHeader.displayName = "CardHeader"
+          <p className="text-lg text-white mb-4">{content}</p>
 
-const CardTitle = React.forwardRef(({ className, ...props }, ref) => (
-  <div
-    ref={ref}
-    className={cn("font-semibold leading-none tracking-tight", className)}
-    {...props} />
-))
-CardTitle.displayName = "CardTitle"
+          {links.length > 0 && (
+            <div className="flex justify-between space-x-4">
+              <div className="space-x-4">
+                {links.map((link, index) => (
+                  <Button
+                    key={index}
+                    onClick={() => window.open(link.href, "_blank")}
+                    className="transition-transform transform hover:scale-110"
+                  >
+                    {link.label}
+                  </Button>
+                ))}
+              </div>
 
-const CardDescription = React.forwardRef(({ className, ...props }, ref) => (
-  <div
-    ref={ref}
-    className={cn("text-sm text-muted-foreground", className)}
-    {...props} />
-))
-CardDescription.displayName = "CardDescription"
-
-const CardContent = React.forwardRef(({ className, ...props }, ref) => (
-  <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />
-))
-CardContent.displayName = "CardContent"
-
-const CardFooter = React.forwardRef(({ className, ...props }, ref) => (
-  <div
-    ref={ref}
-    className={cn("flex items-center p-6 pt-0", className)}
-    {...props} />
-))
-CardFooter.displayName = "CardFooter"
-
-export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
+              <div className="flex items-center justify-start gap-2 pr-3">
+                <FaUsers scale={1.5} />
+                {teamSize}
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    </motion.div>
+  );
+}

@@ -25,7 +25,7 @@ export default function HomePage() {
               className="text-center xl:text-left order-2 xl:order-none"
             >
               <span className="text-xl">Software Developer</span>
-              <TypingHeader firstLine="Hello I'm" secondLine="Dang Lam" />
+              <TypingHeader />
               <p className="max-w-[500px] mb-9 text-white">
                 Welcome to my portfolio! This is my little corner of the
                 internet where I share blogs, job descriptions for recruiters,
