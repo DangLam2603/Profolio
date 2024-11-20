@@ -24,10 +24,7 @@ const Projects = () => {
           <ProjectCard
             title="FPTU Starter"
             date="May 2024 - Jul 2024"
-            content="FPTU Starter is a crowdfunding platform specifically designed to support the students, faculty, and community of FPT University. This
-            platform aims to empower FPTU students by providing them with the resources and support needed to bring innovative ideas and projects to
-            life. Whether it’s a research project, a startup, a social initiative, or an artistic endeavor, FPTU Starter connects project creators with backers
-            who are eager to contribute to success. The platform funded 20 projects, raising over $50,000 in its initial three months."
+            content="FPTU Starter is a crowdfunding platform supporting FPT University’s students, faculty, and community. It connects creators with backers to bring innovative projects—research, startups, social initiatives, or art—to life, fostering collaboration and meaningful impact."
             imgSrc="/assets/projectImg/FPTUStarter.png"
             teamSize="5"
             isRight={true}
