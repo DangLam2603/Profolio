@@ -7,7 +7,7 @@ const Projects = () => {
       <div className="container mx-auto">
         <div className="flex flex-col items-center justify-between xl:pt-8 xl:pb-24">
           <ProjectCard
-            title="Fun And Funding"
+            title="Fun & Funding"
             date="Sep 2024 - Now"
             content="Fun&Funding helps independent game developers bring their educational children’s games to life by providing a platform to showcase and crowdfund their projects. It connects creators with parents looking for innovative ways to educate their children, offering the financial support and exposure needed to turn ideas into reality."
             imgSrc="/assets/projectImg/FunAndFunding.png"
@@ -31,7 +31,7 @@ const Projects = () => {
             imgSrc="/assets/projectImg/FPTUStarter.png"
             teamSize="5"
             isRight={true}
-            tags={["React", "Tailwind", ".Net 6"]}
+            tags={["React", ".Net 6", "Tailwind"]}
             links={[
               {
                 href: "https://github.com/DangLam2603/FPTU-Starter-Back",
@@ -40,7 +40,7 @@ const Projects = () => {
             ]}
           />
           <ProjectCard
-            title="Deploy Web API with Elastic Beanstalk & CI/CD via CodePipeline "
+            title="Deploy Web API ElasticBeanstalk & CI/CD via CodePipeline"
             date="Aug 2024"
             content="In this workshop, we will build and deploy a Web API system (NET 6, Swagger UI), set up a database (SQL Server), configure load
             balancing and auto-scaling on AWS cloud infrastructure, and develop a continuous integration (CI) and continuous deployment (CD)

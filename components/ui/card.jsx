@@ -19,26 +19,25 @@ export default function ProjectCard({
 }) {
   return (
     <motion.div
-      className="w-full py-6"
+      className="xl:w-full p-6 m-8"
       initial={{ opacity: 0 }} // Start invisible
       animate={{ opacity: 1 }} // Fade in to visible
       transition={{ duration: 0.5, delay: 1, ease: "easeInOut" }} // Fade-in effect
     >
       <div
         className={`
-          w-full 
-          max-w-full 
+          w-full
           flex flex-col xl:flex-row 
           shadow-2xl 
           rounded-xl 
           overflow-hidden 
-          transform transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-3xl
+          transform transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-black hover:shadow-2xl 
           ${isRight ? "xl:flex-row-reverse" : ""}
         `}
       >
         {/* Image Section */}
         {imgSrc && (
-          <div className="flex items-center justify-center">
+          <div className="flex items-center p-6 justify-center">
             <img
               src={imgSrc}
               alt={imgAlt || title}
@@ -50,16 +49,16 @@ export default function ProjectCard({
 
         {/* Content Section */}
         <div className="w-full p-6 flex flex-col justify-center">
-          <div className="flex items-center justify-between gap-2">
-            <div className="w-full">
-              <h2 className="text-3xl font-bold mb-4 text-white">{title}</h2>
+          <div className="flex flex-row sm:flex-row items-center justify-between">
+            <div className="xl:w-[70%] w-fit ">
+              <h2 className="text-2xl font-bold mb-4 text-white">{title}</h2>
               {tags.length > 0 && (
-                <div className=" flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap gap-2 mb-4">
                   {tags.map((tag, index) => (
                     <Badge
                       key={index}
                       className="bg-gray-500 text-white px-3 py-1 rounded-full shadow 
-                             hover:bg-slate-700 transition-colors cursor-pointer"
+                         hover:bg-slate-700 transition-colors cursor-pointer"
                     >
                       {tag}
                     </Badge>
@@ -67,9 +66,9 @@ export default function ProjectCard({
                 </div>
               )}
             </div>
-            <div className="w-[50%] flex items-center justify-end gap-2 pr-3">
+            <div className="w-full xl:w-fit flex items-center justify-end gap-2 pr-3">
               <FaCalendarCheck scale={1.5} />
-              {date}
+              <span>{date}</span>
             </div>
           </div>
 
