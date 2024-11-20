@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { FaUsers, FaCalendarCheck } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 export default function ProjectCard({
   isRight,
@@ -17,6 +18,8 @@ export default function ProjectCard({
   tags = [],
   links = [],
 }) {
+  const [isMore, setIsMore] = useState(false);
+  const shortContent = content.substring(0, 110);
   return (
     <motion.div
       className="w-full m-4 p-8"
@@ -40,11 +43,11 @@ export default function ProjectCard({
       >
         {/* Image Section */}
         {imgSrc && (
-          <div className="flex items-center justify-center p-4 sm:p-6 xl:w-1/2">
+          <div className="flex items-center justify-center p-4 sm:p-8 xl:w-1/2 bg-white opacity-4 ">
             <img
               src={imgSrc}
               alt={imgAlt || title}
-              className="h-48 sm:h-64 xl:h-96 w-full object-contain
+              className="h-48 sm:h-64 xl:h-96 w-full object-contain 
                         opacity-90 hover:opacity-100 transition-opacity duration-300"
             />
           </div>
@@ -80,7 +83,29 @@ export default function ProjectCard({
           </div>
 
           {/* Content */}
-          <p className="text-base sm:text-lg text-white mb-4">{content}</p>
+          <p className="text-base sm:text-lg text-gray-100 mb-4 leading-relaxed">
+            {isMore ? (
+              <>
+                {content}{" "}
+                <button
+                  onClick={() => setIsMore(false)}
+                  className="text-accent font-medium hover:underline "
+                >
+                  Read Less
+                </button>
+              </>
+            ) : (
+              <>
+                {shortContent}...{" "}
+                <button
+                  onClick={() => setIsMore(true)}
+                  className="text-accent font-medium hover:underline"
+                >
+                  Read More
+                </button>
+              </>
+            )}
+          </p>
 
           {/* Footer Section */}
           {links.length > 0 && (

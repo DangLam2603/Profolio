@@ -37,7 +37,7 @@ const Projects = () => {
             ]}
           />
           <ProjectCard
-            title="Deploy Web API ElasticBeanstalk & CI/CD via CodePipeline"
+            title="Deploy Web API using Elastic Beanstalk & CI/CD via CodePipeline"
             date="Aug 2024"
             content="In this workshop, we will build and deploy a Web API system (NET 6, Swagger UI), set up a database (SQL Server), configure load
             balancing and auto-scaling on AWS cloud infrastructure, and develop a continuous integration (CI) and continuous deployment (CD)
