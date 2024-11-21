@@ -109,7 +109,11 @@ export default function ProjectCard({
 
           {/* Footer Section */}
           {links.length > 0 && (
-            <div className="flex flex-row justify-between gap-4">
+            <div
+              className={`flex justify-between ${
+                isRight ? "flex-row" : "flex-row-reverse"
+              } gap-4`}
+            >
               <div className="flex flex-wrap gap-2">
                 {links.map((link, index) => (
                   <Button
