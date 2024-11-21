@@ -155,7 +155,7 @@ export default function HomePage() {
                   Club."
                 </p>
                 <Image
-                  src="/assets/file/mec-grp.jpg"
+                  src="/assets/mec/mec-grp.jpg"
                   sizes="2xl"
                   priority
                   quality={100}
@@ -171,7 +171,7 @@ export default function HomePage() {
                 className="w-full xl:mt-16 mt-2 flex xl:flex-row flex-col justify-between items-center"
               >
                 <Image
-                  src="/assets/file/gr2.jpg"
+                  src="/assets/mec/gr2.jpg"
                   sizes="2xl"
                   priority
                   quality={100}
@@ -196,7 +196,7 @@ export default function HomePage() {
                   one another with love and warmth."
                 </p>
                 <Image
-                  src="/assets/file/say.jpg"
+                  src="/assets/mec/say.jpg"
                   sizes="2xl"
                   priority
                   quality={100}
@@ -223,7 +223,7 @@ export default function HomePage() {
                 />
                 <div>
                   <Image
-                    src="/assets/file/IMG_0590.png"
+                    src="/assets/mec/IMG_0590.png"
                     sizes="2xl"
                     priority
                     quality={100}
@@ -233,7 +233,7 @@ export default function HomePage() {
                     className="object-cover object-center border-4 border-white shadow-lg transform rotate-6"
                   />
                   <Image
-                    src="/assets/file/LD.png"
+                    src="/assets/mec/LD.png"
                     sizes="2xl"
                     priority
                     quality={100}
@@ -256,7 +256,7 @@ export default function HomePage() {
                     share my knowledge with them."
                   </p>
                   <Image
-                    src="/assets/file/hack.jpg"
+                    src="/assets/mec/hack.jpg"
                     sizes="2xl"
                     priority
                     quality={100}
@@ -268,7 +268,7 @@ export default function HomePage() {
                 </div>
                 <div className=" relative flex flex-row m-2 justify-center  items-center">
                   <Image
-                    src="/assets/file/top.jpg"
+                    src="/assets/mec/top.jpg"
                     sizes="2xl"
                     priority
                     quality={100}
@@ -278,7 +278,7 @@ export default function HomePage() {
                     className="absolute top-24 left-24 object-cover object-center border-4 border-white shadow-lg transform -rotate-6"
                   />
                   <Image
-                    src="/assets/file/hack.jpg"
+                    src="/assets/mec/hack.jpg"
                     sizes="2xl"
                     priority
                     quality={100}
