@@ -1,4 +1,4 @@
-// useTypingEffect.js
+// TypingHookEffect.jsx
 import { useState, useEffect } from "react";
 
 const useTypingEffect = (text, delay = 0, typingSpeed = 0) => {

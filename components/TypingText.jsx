@@ -1,6 +1,6 @@
-// TypingText.js
+// TypingText.jsx
 import React from "react";
-import useTypingEffect from "./typingHookEffect";
+import useTypingEffect from "./TypingHookEffect"; // Correct the path to the actual filename
 
 const TypingText = ({ text, delay = 100, typingSpeed = 70 }) => {
   const displayText = useTypingEffect(text, delay, typingSpeed);

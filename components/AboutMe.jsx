@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { FaUser } from "react-icons/fa"; // Importing an icon from react-icons
 import { FaDownload } from "react-icons/fa";
 import { Button } from "./ui/button";
-import TypingText from "./Typing";
+import TypingText from "./TypingText";
 const AboutMe = ({ isActive }) => {
   const [isVisible, setIsVisible] = useState(false);
 
