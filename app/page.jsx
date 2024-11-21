@@ -25,7 +25,7 @@ export default function HomePage() {
               className="text-center xl:text-left order-2 xl:order-none"
             >
               <span className="text-xl">Software Developer</span>
-              <TypingHeader />
+              <TypingHeader fullText={"Hello, I'm\nDang Lam!"} />
               <p className="max-w-[500px] mb-9 text-white">
                 Welcome to my portfolio! This is my little corner of the
                 internet where I share blogs, job descriptions for recruiters,
@@ -38,8 +38,8 @@ export default function HomePage() {
                   className="border border-[#00ff99] bg-transparent text-accent hover:text-white flex items-center gap-2"
                   aria-label="Learn more about me"
                 >
-                  <span>About Myself</span>
                   <FaUserAlt />
+                  <span>About Me !!</span>
                 </Button>
               </div>
               {/* Social Links */}
@@ -58,9 +58,13 @@ export default function HomePage() {
           </div>
         ) : (
           // AboutMe Section
-          <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
-            <AboutMe isActive={isActive} />
-            <div className="order-1 xl:order-none mb-8 xl:mb-0">
+          <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24 relative">
+            {/* AboutMe component positioned absolutely */}
+
+            <div className="w-full z-20  relative mb-8 xl:mb-0">
+              <AboutMe isActive={isActive} />
+            </div>
+            <div className="relative order-1 xl:order-none mb-8 xl:mb-0 z-10">
               <Photo isActive={isActive} />
             </div>
           </div>

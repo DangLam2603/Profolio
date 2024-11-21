@@ -1,11 +1,10 @@
 "use client";
 import React, { useState, useEffect } from "react";
 
-const TypingHeader = () => {
+const TypingHeader = ({ fullText }) => {
   const [displayText, setDisplayText] = useState("");
   const [isDelaying, setIsDelaying] = useState(true);
   const [isTyping, setIsTyping] = useState(false);
-  const fullText = "Hello, I'm\nDang Lam!";
 
   useEffect(() => {
     const delayTimer = setTimeout(() => {
