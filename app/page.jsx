@@ -12,7 +12,6 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import AboutMe from "@/components/AboutMe";
 import Image from "next/image";
-import TypingText from "@/components/TypingText";
 
 export default function HomePage() {
   const [isActive, setIsActive] = useState(false);
@@ -155,7 +154,7 @@ export default function HomePage() {
                   Club."
                 </p>
                 <Image
-                  src="/assets/mec/mec-grp.jpg"
+                  src="/assets/mec/mec-grp.JPG"
                   sizes="2xl"
                   priority
                   quality={100}
@@ -171,7 +170,7 @@ export default function HomePage() {
                 className="w-full xl:mt-16 mt-2 flex xl:flex-row flex-col justify-between items-center"
               >
                 <Image
-                  src="/assets/mec/gr2.jpg"
+                  src="/assets/mec/gr2.JPG"
                   sizes="2xl"
                   priority
                   quality={100}
@@ -196,7 +195,7 @@ export default function HomePage() {
                   one another with love and warmth."
                 </p>
                 <Image
-                  src="/assets/mec/say.jpg"
+                  src="/assets/mec/say.JPG"
                   sizes="2xl"
                   priority
                   quality={100}
@@ -223,7 +222,7 @@ export default function HomePage() {
                 />
                 <div>
                   <Image
-                    src="/assets/mec/IMG_0590.png"
+                    src="/assets/mec/IMG_0590.PNG"
                     sizes="2xl"
                     priority
                     quality={100}
@@ -256,7 +255,7 @@ export default function HomePage() {
                     share my knowledge with them."
                   </p>
                   <Image
-                    src="/assets/mec/hack.jpg"
+                    src="/assets/mec/hack.JPG"
                     sizes="2xl"
                     priority
                     quality={100}
@@ -268,7 +267,7 @@ export default function HomePage() {
                 </div>
                 <div className=" relative flex flex-row m-2 justify-center  items-center">
                   <Image
-                    src="/assets/mec/top.jpg"
+                    src="/assets/mec/top.JPG"
                     sizes="2xl"
                     priority
                     quality={100}
@@ -278,7 +277,7 @@ export default function HomePage() {
                     className="absolute top-24 left-24 object-cover object-center border-4 border-white shadow-lg transform -rotate-6"
                   />
                   <Image
-                    src="/assets/mec/hack.jpg"
+                    src="/assets/mec/cer.JPG"
                     sizes="2xl"
                     priority
                     quality={100}
