@@ -23,7 +23,7 @@ export default function HomePage() {
     });
   }, []);
   return (
-    <section className="h-full">
+    <section className="h-full overflow-x-hidden">
       <div className="container mx-auto">
         {!isActive ? (
           <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
