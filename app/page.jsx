@@ -18,6 +18,7 @@ export default function HomePage() {
   useEffect(() => {
     AOS.init({
       duration: 1000,
+      offset: 50,
       once: false,
     });
   }, []);
@@ -77,10 +78,10 @@ export default function HomePage() {
                 <Photo isActive={isActive} />
               </div>
             </div>
-            <div id="work" className="h-[700vh] w-full">
+            <div id="work" className="h-[700vh] w-full mb-20">
               <div className="flex xl:flex-row flex-col justify-between items-center ">
                 <div
-                  data-aos="fade-down-right"
+                  data-aos="zoom-down-right"
                   className="w-full text-white p-6 rounded-xl sm:m-6 shadow-[0_0_15px_5px_rgba(0,0,0,0.3)]"
                 >
                   <p>
@@ -115,11 +116,11 @@ export default function HomePage() {
               <div
                 data-aos="zoom-out-right"
                 data-aos-anchor-placement="top-center"
-                className="w-full mt-16 flex flex-row justify-start items-center"
+                className="w-full mt-16 flex flex-row justify-around items-center"
               >
                 <Image
                   src="/assets/graduated.jpg"
-                  sizes="2xl"
+                  sizes="xl"
                   priority
                   quality={100}
                   width={500} // Replace with your desired width
@@ -127,6 +128,7 @@ export default function HomePage() {
                   alt="photo"
                   className="object-cover object-center border-4 border-white shadow-lg transform -rotate-6"
                 />
+                <div className="w-1/3"></div>
               </div>
               <div
                 data-aos="zoom-out-left"
@@ -145,7 +147,7 @@ export default function HomePage() {
               </div>
               <div
                 data-aos="fade-right"
-                className="w-full text-white flex xl:flex-row flex-col justify-between mt-16 p-6 rounded-xl sm:m-6 shadow-[0_0_15px_5px_rgba(0,0,0,0.3)]"
+                className="w-full m-12 p-6 text-white flex xl:flex-row flex-col justify-between items-center rounded-xl shadow-[0_0_15px_5px_rgba(0,0,0,0.3)]"
               >
                 <p>
                   "Through my journey, I have made many friends, and I was lucky
@@ -161,12 +163,11 @@ export default function HomePage() {
                   width={500} // Replace with your desired width
                   height={500} // Replace with your desired height
                   alt="photo"
-                  className="object-cover mt-12 object-center border-4 border-white shadow-lg transform rotate-6"
+                  className="object-cover mt-12 object-center border-4 border-white shadow-lg transform -rotate-6"
                 />
               </div>
               <div
                 data-aos="zoom-out-left"
-                data-aos-anchor="#work"
                 className="w-full xl:mt-16 mt-2 flex xl:flex-row flex-col justify-between items-center"
               >
                 <Image
@@ -186,14 +187,10 @@ export default function HomePage() {
                 </p>
               </div>
               <div
-                className="w-full mt-16 flex xlflex-row flex-col justify-between
+                data-aos="fade-up"
+                className="w-full mt-16 flex  flex-col justify-between
                 items-center"
               >
-                <p className="text-white p-6 xl:w-1/2 rounded-xl sm:m-6 shadow-[0_0_15px_5px_rgba(0,0,0,0.3)]">
-                  "...As MEC’s slogan says, 'MEC là nhà' (MEC is Home), it truly
-                  feels like home. In this big family, every MEC member treats
-                  one another with love and warmth."
-                </p>
                 <Image
                   src="/assets/mec/say.JPG"
                   sizes="2xl"
@@ -202,12 +199,16 @@ export default function HomePage() {
                   width={500} // Replace with your desired width
                   height={500} // Replace with your desired height
                   alt="photo"
-                  className="object-cover object-center border-4 border-white shadow-lg transform -rotate-6"
+                  className="m-12 object-cover object-center border-4 border-white shadow-lg "
                 />
+                <p className="order-1text-white p-6 xl:w-1/2 rounded-xl sm:m-6 shadow-[0_0_15px_5px_rgba(0,0,0,0.3)]">
+                  "...As MEC’s slogan says, 'MEC là nhà' (MEC is Home), it truly
+                  feels like home. In this big family, every MEC member treats
+                  one another with love and warmth."
+                </p>
               </div>
               <div
-                data-aos="zoom-out-right"
-                data-aos-anchor="#work"
+                data-aos="fade-up-left"
                 className="w-full mt-16 flex xl:flex-row-reverse flex-col justify-between items-center"
               >
                 <Image
@@ -220,7 +221,7 @@ export default function HomePage() {
                   alt="photo"
                   className="object-cover object-center border-4 xl:mt-12 mb-12 border-white shadow-lg transform rotate-6"
                 />
-                <div>
+                <div data-aos="fade-up-right">
                   <Image
                     src="/assets/mec/IMG_0590.PNG"
                     sizes="2xl"
@@ -244,54 +245,61 @@ export default function HomePage() {
                 </div>
               </div>
               <br />
-              <div className="w-full">
-                <div className="flex xl:flex-row flex-col justify-between items-center">
-                  <p className="text-white p-6 xl:w-1/2  rounded-xl sm:mb-6 shadow-[0_0_15px_5px_rgba(0,0,0,0.3)]">
-                    "...At the end of my journey, I am grateful for the to be a
-                    part of FPTU, this open so much opportunity for me to
-                    level-up myself. I am really happy to take a part at this VP
-                    bank Hackathon contest where i found so many talented
-                    persons. It was a great experience to learn from them and to
-                    share my knowledge with them."
-                  </p>
-                  <Image
-                    src="/assets/mec/hack.JPG"
-                    sizes="2xl"
-                    priority
-                    quality={100}
-                    width={500} // Replace with your desired width
-                    height={500} // Replace with your desired height
-                    alt="photo"
-                    className="object-cover object-center border-4 border-white shadow-lg transform rotate-6"
-                  />
-                </div>
-                <div className=" relative flex flex-row m-2 justify-center  items-center">
-                  <Image
-                    src="/assets/mec/top.JPG"
-                    sizes="2xl"
-                    priority
-                    quality={100}
-                    width={500} // Replace with your desired width
-                    height={500} // Replace with your desired height
-                    alt="photo"
-                    className="absolute top-24 left-24 object-cover object-center border-4 border-white shadow-lg transform -rotate-6"
-                  />
-                  <Image
-                    src="/assets/mec/cer.JPG"
-                    sizes="2xl"
-                    priority
-                    quality={100}
-                    width={500} // Replace with your desired width
-                    height={500} // Replace with your desired height
-                    alt="photo"
-                    className="absolute top-60 right-24 object-cover object-center border-4 border-white shadow-lg transform rotate-6"
-                  />
+
+              <div
+                data-aos="zoom-out-left"
+                className="flex xl:flex-row flex-col justify-between items-center"
+              >
+                <p className="text-white p-6 xl:w-1/2 m-10 rounded-xl sm:mb-6 shadow-[0_0_15px_5px_rgba(0,0,0,0.3)]">
+                  "...At the end of my journey, I am grateful for the to be a
+                  part of FPTU, this open so much opportunity for me to level-up
+                  myself. I am really happy to take a part at this VP bank
+                  Hackathon contest where i found so many talented persons. It
+                  was a great experience to learn from them and to share my
+                  knowledge with them."
+                </p>
+                <Image
+                  src="/assets/mec/hack.JPG"
+                  sizes="2xl"
+                  priority
+                  quality={100}
+                  width={500} // Replace with your desired width
+                  height={500} // Replace with your desired height
+                  alt="photo"
+                  className="object-cover object-center border-4 border-white shadow-lg transform rotate-6"
+                />
+              </div>
+              <div
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-easing="ease-in-out"
+                className="xl:relative flex xl:flex-row flex-col m-2 justify-center items-center"
+              >
+                <Image
+                  src="/assets/mec/top.JPG"
+                  sizes="2xl"
+                  priority
+                  quality={100}
+                  width={500} // Replace with your desired width
+                  height={500} // Replace with your desired height
+                  alt="photo"
+                  className="xl:absolute block  top-24 left-24 object-cover object-center border-4 border-white shadow-lg transform -rotate-6"
+                />
+                <Image
+                  src="/assets/mec/cer.JPG"
+                  sizes="2xl"
+                  priority
+                  quality={100}
+                  width={500} // Replace with your desired width
+                  height={500} // Replace with your desired height
+                  alt="photo"
+                  className="xl:absolute block top-60 right-24 object-cover object-center border-4 border-white shadow-lg transform rotate-6"
+                />
+                <div className=" p-10 w-full flex justify-end items-end">
+                  What's Next ... ?!!
                 </div>
               </div>
             </div>
-            {/* <div className="p-10 w-full flex xl:flex-row flex-col justify-center items-center">
-              To be continued ...
-            </div> */}
           </>
         )}
       </div>

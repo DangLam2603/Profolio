@@ -44,7 +44,7 @@ const AboutMe = ({ isActive }) => {
             smooth={true}
             duration={1000}
             offset={-100}
-            className={`border border-[#00ff99] p-2 rounded-2xl bg-transparent text-accent hover:text-white hover:bg-green-600 flex items-center gap-2 transition-opacity duration-1000 ease-in-out ${
+            className={`border border-[#00ff99] p-2 rounded-2xl bg-transparent text-accent hover:text-white hover:bg-green-600 flex justify-center items-center gap-2 transition-opacity duration-1000 ease-in-out ${
               isVisible ? "opacity-100" : "opacity-0"
             }`}
           >
@@ -70,7 +70,12 @@ const AboutMe = ({ isActive }) => {
         <TypingText text="Welcome!, you must be new around here. Ok, so you already know my name, but to make sure you know who I am, here is a little secret..." />
         <div className="flex flex-col xl:flex-row gap-8 justify-end mb-6">
           <Button
-            className={`border border-[#00ff99] bg-transparent text-accent hover:text-white flex items-center gap-2 transition-opacity duration-1000 ease-in-out ${
+            to="work"
+            spy={true}
+            smooth={true}
+            duration={1000}
+            offset={-100}
+            className={`border border-[#00ff99] p-2 rounded-2xl bg-transparent text-accent hover:text-white flex justify-center items-center gap-2 transition-opacity duration-1000 ease-in-out ${
               isVisible ? "opacity-100" : "opacity-0"
             }`}
             aria-label="Learn more about me"
