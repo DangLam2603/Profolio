@@ -16,6 +16,7 @@ import Image from "next/image";
 export default function HomePage() {
   const [isActive, setIsActive] = useState(false);
   useEffect(() => {
+    document.body.classList.add("overflow-x-hidden");
     AOS.init({
       duration: 1000,
       offset: 50,
@@ -23,7 +24,7 @@ export default function HomePage() {
     });
   }, []);
   return (
-    <section className="h-full overflow-x-hidden">
+    <section className="h-full">
       <div className="container mx-auto">
         {!isActive ? (
           <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
@@ -98,8 +99,7 @@ export default function HomePage() {
                 </div>
                 <div
                   data-aos="fade-down-left"
-                  data-aos-anchor-placement="top-center"
-                  className="relative w-2/3 flex justify-left items-center"
+                  className="relative w-full mt-6 flex justify-left items-center"
                 >
                   <Image
                     src="/assets/BRVT.jpeg"
@@ -147,7 +147,7 @@ export default function HomePage() {
               </div>
               <div
                 data-aos="fade-right"
-                className="w-full m-12 p-6 text-white flex xl:flex-row flex-col justify-between items-center rounded-xl shadow-[0_0_15px_5px_rgba(0,0,0,0.3)]"
+                className="w-full mt-12 p-6 text-white flex xl:flex-row flex-col justify-between items-center rounded-xl shadow-[0_0_15px_5px_rgba(0,0,0,0.3)]"
               >
                 <p>
                   "Through my journey, I have made many friends, and I was lucky
@@ -188,7 +188,7 @@ export default function HomePage() {
               </div>
               <div
                 data-aos="fade-up"
-                className="w-full mt-16 flex  flex-col justify-between
+                className="w-full xl:mt-20 flex flex-col justify-between
                 items-center"
               >
                 <Image
@@ -199,9 +199,9 @@ export default function HomePage() {
                   width={500} // Replace with your desired width
                   height={500} // Replace with your desired height
                   alt="photo"
-                  className="m-12 object-cover object-center border-4 border-white shadow-lg "
+                  className="object-cover object-center border-4 border-white shadow-lg "
                 />
-                <p className="order-1text-white p-6 xl:w-1/2 rounded-xl sm:m-6 shadow-[0_0_15px_5px_rgba(0,0,0,0.3)]">
+                <p className="order-1 text-white p-6 xl:w-1/2 rounded-xl sm:m-6 shadow-[0_0_15px_5px_rgba(0,0,0,0.3)]">
                   "...As MEC’s slogan says, 'MEC là nhà' (MEC is Home), it truly
                   feels like home. In this big family, every MEC member treats
                   one another with love and warmth."
@@ -209,7 +209,7 @@ export default function HomePage() {
               </div>
               <div
                 data-aos="fade-up-left"
-                className="w-full mt-16 flex xl:flex-row-reverse flex-col justify-between items-center"
+                className="w-full mt-16 mb-16 flex xl:flex-row-reverse flex-col justify-between items-center"
               >
                 <Image
                   src="/assets/mec/mec1.jpg"
@@ -244,13 +244,37 @@ export default function HomePage() {
                   />
                 </div>
               </div>
+              <div
+                data-aos="flip-up"
+                className="relative mt-20  flex xl:flex-row flex-col justify-between items-center"
+              >
+                <Image
+                  src="/assets/Play.PNG"
+                  sizes="2xl"
+                  priority
+                  quality={100}
+                  width={600} // Replace with your desired width
+                  height={600} // Replace with your desired height
+                  alt="photo"
+                  className="object-cover xl:mt-20 object-center border-4 border-white shadow-lg"
+                />
+                <Image
+                  src="/assets/IMG2.JPG"
+                  sizes="2xl"
+                  priority
+                  quality={100}
+                  width={400} // Replace with your desired width
+                  height={400} // Replace with your desired height
+                  alt="photo"
+                  className="xl:absolute xl:top-[-30%] xl:right-[1%] object-cover object-center border-4 border-white shadow-lg transform rotate-12"
+                />
+              </div>
               <br />
-
               <div
                 data-aos="zoom-out-left"
-                className="flex xl:flex-row flex-col justify-between items-center"
+                className="flex xl:flex-row mt-16 flex-col justify-between items-center"
               >
-                <p className="text-white p-6 xl:w-1/2 m-10 rounded-xl sm:mb-6 shadow-[0_0_15px_5px_rgba(0,0,0,0.3)]">
+                <p className="text-white p-6 xl:w-1/2 mb-8 rounded-xl sm:mb-6 shadow-[0_0_15px_5px_rgba(0,0,0,0.3)]">
                   "...At the end of my journey, I am grateful for the to be a
                   part of FPTU, this open so much opportunity for me to level-up
                   myself. I am really happy to take a part at this VP bank
