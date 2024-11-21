@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { FaUser } from "react-icons/fa"; // Importing an icon from react-icons
 import { FaDownload } from "react-icons/fa";
-import { Button } from "./ui/button";
+import { Button } from "react-scroll";
 import TypingText from "./TypingText";
 const AboutMe = ({ isActive }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -17,14 +17,6 @@ const AboutMe = ({ isActive }) => {
     return () => clearTimeout(timer);
   }, []);
 
-  const handleDownload = () => {
-    const link = document.createElement("a");
-    link.href = "/assets/DangLam_CV.pdf";
-    link.download = "DangLam_CV.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
   return (
     <>
       {/* For screens xl and above */}
@@ -47,14 +39,16 @@ const AboutMe = ({ isActive }) => {
 
         <div className="flex flex-col xl:flex-row gap-8 justify-end mb-6">
           <Button
-            onClick={handleDownload}
-            className={`border border-[#00ff99] bg-transparent text-accent hover:text-white flex items-center gap-2 transition-opacity duration-1000 ease-in-out ${
+            to="work"
+            spy={true}
+            smooth={true}
+            duration={1000}
+            offset={-100}
+            className={`border border-[#00ff99] p-2 rounded-2xl bg-transparent text-accent hover:text-white hover:bg-green-600 flex items-center gap-2 transition-opacity duration-1000 ease-in-out ${
               isVisible ? "opacity-100" : "opacity-0"
             }`}
-            aria-label="Learn more about me"
           >
-            <span>Download CV</span>
-            <FaDownload />
+            <span>Tell me about it !!</span>
           </Button>
         </div>
       </motion.div>
@@ -76,13 +70,12 @@ const AboutMe = ({ isActive }) => {
         <TypingText text="Welcome!, you must be new around here. Ok, so you already know my name, but to make sure you know who I am, here is a little secret..." />
         <div className="flex flex-col xl:flex-row gap-8 justify-end mb-6">
           <Button
-            onClick={handleDownload}
             className={`border border-[#00ff99] bg-transparent text-accent hover:text-white flex items-center gap-2 transition-opacity duration-1000 ease-in-out ${
               isVisible ? "opacity-100" : "opacity-0"
             }`}
             aria-label="Learn more about me"
           >
-            <span>Download CV</span>
+            <span>Tell me about it !!</span>
             <FaDownload />
           </Button>
         </div>
