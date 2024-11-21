@@ -111,7 +111,7 @@ export default function ProjectCard({
           {links.length > 0 && (
             <div
               className={`flex justify-between ${
-                isRight ? "flex-row" : "flex-row-reverse"
+                isRight ? "flex-row" : "xl:flex-row-reverse "
               } gap-4`}
             >
               <div className="flex flex-wrap gap-2">

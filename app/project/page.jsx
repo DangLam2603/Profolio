@@ -58,7 +58,7 @@ const Projects = () => {
                 href: "https://github.com/DangLam2603/FCJ-WS1",
                 label: "GitHub",
               },
-              { href: "https://fcj-ws1.vercel.app/", label: "Live Demo" },
+              { href: "https://fcj-ws1.vercel.app/", label: "Site" },
             ]}
           />
           <ProjectCard
@@ -75,7 +75,7 @@ const Projects = () => {
                 href: "https://github.com/DangLam2603/FCJ-WS2",
                 label: "GitHub",
               },
-              { href: "https://fcj-ws2.vercel.app/", label: "Live Demo" },
+              { href: "https://fcj-ws2.vercel.app/", label: "Site" },
             ]}
           />
         </div>
