@@ -166,9 +166,12 @@ export default function HomePage() {
                   className="object-cover mt-12 object-center border-4 border-white shadow-lg transform -rotate-6"
                 />
               </div>
+              <br />
+              <br />
+
               <div
                 data-aos="zoom-out-left"
-                className="w-full xl:mt-16 mt-2 flex xl:flex-row flex-col justify-between items-center"
+                className="w-full xl:mt-20 mt-2 flex xl:flex-row flex-col justify-between items-center"
               >
                 <Image
                   src="/assets/mec/gr2.JPG"
@@ -180,15 +183,17 @@ export default function HomePage() {
                   alt="photo"
                   className="object-cover object-center border-4 border-white shadow-lg transform rotate-6"
                 />
-                <p className="text-white p-6 xl:w-1/2 rounded-xl sm:m-6 shadow-[0_0_15px_5px_rgba(0,0,0,0.3)]">
+                <p className="text-white mt-8 p-6 xl:w-1/2 rounded-xl sm:m-6 shadow-[0_0_15px_5px_rgba(0,0,0,0.3)]">
                   "In MEC, we genuinely care for each other and are always happy
                   to see one another. We share so many moments together—having
                   fun, laughing, and even crying...""
                 </p>
               </div>
+              <br />
+              <br />
               <div
                 data-aos="fade-up"
-                className="w-full xl:mt-20 flex flex-col justify-between
+                className="w-full xl:mt-20 mt-10 flex flex-col justify-between
                 items-center"
               >
                 <Image
@@ -245,8 +250,8 @@ export default function HomePage() {
                 </div>
               </div>
               <div
-                data-aos="flip-up"
-                className="relative mt-20  flex xl:flex-row flex-col justify-between items-center"
+                data-aos="zoom-out-left"
+                className="relative xl:mt-20 mt-12 flex xl:flex-row flex-col justify-between items-center"
               >
                 <Image
                   src="/assets/Play.PNG"
@@ -271,7 +276,7 @@ export default function HomePage() {
               </div>
               <br />
               <div
-                data-aos="zoom-out-left"
+                data-aos="flip-up"
                 className="flex xl:flex-row mt-16 flex-col justify-between items-center"
               >
                 <p className="text-white p-6 xl:w-1/2 mb-8 rounded-xl sm:mb-6 shadow-[0_0_15px_5px_rgba(0,0,0,0.3)]">
@@ -295,8 +300,6 @@ export default function HomePage() {
               </div>
               <div
                 data-aos="fade-up"
-                data-aos-duration="1000"
-                data-aos-easing="ease-in-out"
                 className="xl:relative flex xl:flex-row flex-col m-2 justify-center items-center"
               >
                 <Image
