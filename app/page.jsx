@@ -79,7 +79,7 @@ export default function HomePage() {
                 <Photo isActive={isActive} />
               </div>
             </div>
-            <div id="work" className="h-[700vh] w-full mb-20">
+            <div id="work" className="min-h-full w-full mb-20 m-10">
               <div className="flex xl:flex-row flex-col justify-between items-center ">
                 <div
                   data-aos="zoom-down-right"
@@ -249,10 +249,7 @@ export default function HomePage() {
                   />
                 </div>
               </div>
-              <div
-                data-aos="zoom-out-left"
-                className="relative xl:mt-20 mt-12 flex xl:flex-row flex-col justify-between items-center"
-              >
+              <div className="relative xl:mt-20 mt-12 flex xl:flex-row flex-col justify-between items-center">
                 <Image
                   src="/assets/Play.PNG"
                   sizes="2xl"
@@ -275,10 +272,7 @@ export default function HomePage() {
                 />
               </div>
               <br />
-              <div
-                data-aos="flip-up"
-                className="flex xl:flex-row mt-16 flex-col justify-between items-center"
-              >
+              <div className="flex xl:flex-row mt-16 flex-col justify-between items-center">
                 <p className="text-white p-6 xl:w-1/2 mb-8 rounded-xl sm:mb-6 shadow-[0_0_15px_5px_rgba(0,0,0,0.3)]">
                   "...At the end of my journey, I am grateful for the to be a
                   part of FPTU, this open so much opportunity for me to level-up
@@ -298,10 +292,7 @@ export default function HomePage() {
                   className="object-cover object-center border-4 border-white shadow-lg transform rotate-6"
                 />
               </div>
-              <div
-                data-aos="fade-up"
-                className="xl:relative flex xl:flex-row flex-col m-2 justify-center items-center"
-              >
+              <div className="xl:relative min-h-full flex xl:flex-row flex-col m-2 justify-center items-center">
                 <Image
                   src="/assets/mec/top.JPG"
                   sizes="2xl"
@@ -310,7 +301,7 @@ export default function HomePage() {
                   width={500} // Replace with your desired width
                   height={500} // Replace with your desired height
                   alt="photo"
-                  className="xl:absolute block  top-24 left-24 object-cover object-center border-4 border-white shadow-lg transform -rotate-6"
+                  className="xl:absolute block top-24 left-24 object-cover object-center border-4 border-white shadow-lg transform -rotate-6"
                 />
                 <Image
                   src="/assets/mec/cer.JPG"
@@ -322,7 +313,7 @@ export default function HomePage() {
                   alt="photo"
                   className="xl:absolute block top-60 right-24 object-cover object-center border-4 border-white shadow-lg transform rotate-6"
                 />
-                <div className=" p-10 w-full flex justify-end items-end">
+                <div className="p-10 w-full flex justify-end items-end">
                   What's Next ... ?!!
                 </div>
               </div>
