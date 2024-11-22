@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Photo from "@/components/Photo";
@@ -8,13 +8,13 @@ import Social from "@/components/Social";
 import TypingHeader from "@/components/TypingEffect";
 import { Button } from "@/components/ui/button";
 import { FaUserAlt } from "react-icons/fa";
-import { useState } from "react";
 import { motion } from "framer-motion";
 import AboutMe from "@/components/AboutMe";
 import Image from "next/image";
 
 export default function HomePage() {
   const [isActive, setIsActive] = useState(false);
+
   useEffect(() => {
     document.body.classList.add("overflow-x-hidden");
     AOS.init({
@@ -23,9 +23,10 @@ export default function HomePage() {
       once: false,
     });
   }, []);
+
   return (
     <section className="h-full">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4 sm:px-8">
         {!isActive ? (
           <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
             {/* Left side - Introduction */}
@@ -72,15 +73,17 @@ export default function HomePage() {
           <>
             <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24 relative">
               {/* AboutMe component positioned absolutely */}
-              <div className="w-full z-20  relative mb-8 xl:mb-0">
+              <div className="w-full z-20 relative mb-8 xl:mb-0">
                 <AboutMe isActive={isActive} />
               </div>
               <div className="relative order-1 xl:order-none mb-8 xl:mb-0 z-10">
                 <Photo isActive={isActive} />
               </div>
             </div>
-            <div id="work" className="min-h-full w-full mb-20 m-10">
-              <div className="flex xl:flex-row flex-col justify-between items-center ">
+
+            {/* Work Section */}
+            <div id="work" className="container h-[750vh] mb-20 ">
+              <div className="max-w-full flex xl:flex-row flex-col justify-between items-center">
                 <div
                   data-aos="zoom-down-right"
                   className="w-full text-white p-6 rounded-xl sm:m-6 shadow-[0_0_15px_5px_rgba(0,0,0,0.3)]"
@@ -97,6 +100,7 @@ export default function HomePage() {
                     Developer at FPTU"
                   </p>
                 </div>
+
                 <div
                   data-aos="fade-down-left"
                   className="relative w-full mt-6 flex justify-left items-center"
@@ -106,45 +110,43 @@ export default function HomePage() {
                     sizes="2xl"
                     priority
                     quality={100}
-                    width={500} // Replace with your desired width
-                    height={500} // Replace with your desired height
+                    width={500}
+                    height={500}
                     alt="photo"
-                    className=" object-cover object-center border-4 border-white shadow-lg"
+                    className="object-cover object-center border-4 border-white shadow-lg"
                   />
                 </div>
               </div>
+
+              {/* Additional images with better responsive grid */}
               <div
                 data-aos="zoom-out-right"
                 data-aos-anchor-placement="top-center"
-                className="w-full mt-16 flex flex-row justify-around items-center"
+                className="w-full mt-16 flex flex-wrap justify-around items-center gap-4"
               >
                 <Image
                   src="/assets/graduated.jpg"
                   sizes="xl"
                   priority
                   quality={100}
-                  width={500} // Replace with your desired width
-                  height={500} // Replace with your desired height
+                  width={500}
+                  height={500}
                   alt="photo"
                   className="object-cover object-center border-4 border-white shadow-lg transform -rotate-6"
                 />
-                <div className="w-1/3"></div>
-              </div>
-              <div
-                data-aos="zoom-out-left"
-                className="w-full flex flex-row justify-end items-center"
-              >
                 <Image
                   src="/assets/FPTU.jpeg"
                   sizes="2xl"
                   priority
                   quality={100}
-                  width={500} // Replace with your desired width
-                  height={500} // Replace with your desired height
+                  width={500}
+                  height={500}
                   alt="photo"
                   className="object-cover object-center border-4 border-white shadow-lg transform rotate-6"
                 />
               </div>
+
+              {/* Club Section */}
               <div
                 data-aos="fade-right"
                 className="w-full mt-12 p-6 text-white flex xl:flex-row flex-col justify-between items-center rounded-xl shadow-[0_0_15px_5px_rgba(0,0,0,0.3)]"
@@ -160,14 +162,12 @@ export default function HomePage() {
                   sizes="2xl"
                   priority
                   quality={100}
-                  width={500} // Replace with your desired width
-                  height={500} // Replace with your desired height
+                  width={500}
+                  height={500}
                   alt="photo"
                   className="object-cover mt-12 object-center border-4 border-white shadow-lg transform -rotate-6"
                 />
               </div>
-              <br />
-              <br />
 
               <div
                 data-aos="zoom-out-left"
@@ -178,33 +178,31 @@ export default function HomePage() {
                   sizes="2xl"
                   priority
                   quality={100}
-                  width={500} // Replace with your desired width
-                  height={500} // Replace with your desired height
+                  width={500}
+                  height={500}
                   alt="photo"
                   className="object-cover object-center border-4 border-white shadow-lg transform rotate-6"
                 />
                 <p className="text-white mt-8 p-6 xl:w-1/2 rounded-xl sm:m-6 shadow-[0_0_15px_5px_rgba(0,0,0,0.3)]">
                   "In MEC, we genuinely care for each other and are always happy
                   to see one another. We share so many moments together—having
-                  fun, laughing, and even crying...""
+                  fun, laughing, and even crying..."
                 </p>
               </div>
-              <br />
-              <br />
+
               <div
                 data-aos="fade-up"
-                className="w-full xl:mt-20 mt-10 flex flex-col justify-between
-                items-center"
+                className="w-full xl:mt-20 mt-10 flex flex-col justify-between items-center"
               >
                 <Image
                   src="/assets/mec/say.JPG"
                   sizes="2xl"
                   priority
                   quality={100}
-                  width={500} // Replace with your desired width
-                  height={500} // Replace with your desired height
+                  width={500}
+                  height={500}
                   alt="photo"
-                  className="object-cover object-center border-4 border-white shadow-lg "
+                  className="object-cover object-center border-4 border-white shadow-lg"
                 />
                 <p className="order-1 text-white p-6 xl:w-1/2 rounded-xl sm:m-6 shadow-[0_0_15px_5px_rgba(0,0,0,0.3)]">
                   "...As MEC’s slogan says, 'MEC là nhà' (MEC is Home), it truly
@@ -249,7 +247,10 @@ export default function HomePage() {
                   />
                 </div>
               </div>
-              <div className="relative xl:mt-20 mt-12 flex xl:flex-row flex-col justify-between items-center">
+              <div
+                data-aos="fade-up"
+                className="relative xl:mt-20 mt-12 flex xl:flex-row flex-col justify-between items-center"
+              >
                 <Image
                   src="/assets/Play.PNG"
                   sizes="2xl"
@@ -265,14 +266,17 @@ export default function HomePage() {
                   sizes="2xl"
                   priority
                   quality={100}
-                  width={400} // Replace with your desired width
-                  height={400} // Replace with your desired height
+                  width={300} // Replace with your desired width
+                  height={300} // Replace with your desired height
                   alt="photo"
                   className="xl:absolute xl:top-[-30%] xl:right-[1%] object-cover object-center border-4 border-white shadow-lg transform rotate-12"
                 />
               </div>
               <br />
-              <div className="flex xl:flex-row mt-16 flex-col justify-between items-center">
+              <div
+                data-aos="fade-up"
+                className="flex xl:flex-row mt-16 flex-col justify-between items-center"
+              >
                 <p className="text-white p-6 xl:w-1/2 mb-8 rounded-xl sm:mb-6 shadow-[0_0_15px_5px_rgba(0,0,0,0.3)]">
                   "...At the end of my journey, I am grateful for the to be a
                   part of FPTU, this open so much opportunity for me to level-up
@@ -292,7 +296,11 @@ export default function HomePage() {
                   className="object-cover object-center border-4 border-white shadow-lg transform rotate-6"
                 />
               </div>
-              <div className="xl:relative min-h-full flex xl:flex-row flex-col m-2 justify-center items-center">
+              <br />
+              <div
+                data-aos="fade-up"
+                className="xl:relative flex xl:flex-row flex-col m-2 justify-center items-center"
+              >
                 <Image
                   src="/assets/mec/top.JPG"
                   sizes="2xl"
