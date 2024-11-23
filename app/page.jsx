@@ -267,8 +267,8 @@ export default function HomePage() {
                   sizes="2xl"
                   priority
                   quality={100}
-                  width={300} // Replace with your desired width
-                  height={300} // Replace with your desired height
+                  width={350} // Replace with your desired width
+                  height={350} // Replace with your desired height
                   alt="photo"
                   className="xl:absolute xl:top-[-30%] xl:right-[1%] object-cover object-center border-4 border-white shadow-lg transform rotate-12"
                 />
