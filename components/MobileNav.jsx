@@ -27,6 +27,10 @@ const links = [
     name: "Blog",
     path: "/blog",
   },
+  {
+    name: "Contact",
+    path: "/contact",
+  },
 ];
 
 const MobileNav = () => {
@@ -61,7 +65,7 @@ const MobileNav = () => {
                   className={`block text-lg ${
                     pathname === link.path
                       ? "text-accent font-bold"
-                      : "text-gray-700"
+                      : "text-white"
                   } hover:text-accent transition-all`}
                   onClick={handleClose} // Close the nav when a link is clicked
                 >
