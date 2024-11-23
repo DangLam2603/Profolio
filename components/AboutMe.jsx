@@ -43,7 +43,7 @@ const AboutMe = ({ isActive }) => {
             smooth={true}
             duration={1000}
             offset={-100}
-            className={`border border-[#ffd700] text-[#ffd700] rounded-full bg-transparent hover:text-black hover:bg-[#ffed00] p-4 flex justify-center items-center gap-2 transition-opacity duration-1000 ease-in-out ${
+            className={`border border-[#ffd700] text-[#ffd700] rounded-full bg-transparent  hover:bg-[#ffed00] hover:text-black p-4 flex justify-center items-center gap-2 transition-opacity duration-1000 ease-in-out ${
               isVisible ? "opacity-100" : "opacity-0"
             }`}
           >
@@ -74,14 +74,11 @@ const AboutMe = ({ isActive }) => {
             smooth={true}
             duration={1000}
             offset={-100}
-            className={`border border-[#ffd700]  p-2 rounded-full bg-transparent hover:text-black hover:bg-[#ffed00] flex justify-center items-center gap-2 transition-opacity duration-1000 ease-in-out ${
-              isVisible ? "opacity-100 visible" : "opacity-0 hidden"
+            className={`border border-[#ffd700] text-[#ffd700] rounded-full bg-transparent  hover:bg-[#ffed00] hover:text-black p-4 flex justify-center items-center gap-2 transition-opacity duration-1000 ease-in-out ${
+              isVisible ? "opacity-100" : "opacity-0"
             }`}
-            aria-label="Learn more about me"
           >
-            <span className="px-4 text-accent hover:text-black">
-              Tell me about it !!
-            </span>
+            <span className="px-6">Tell me about it !!</span>
           </Button>
         </div>
       </motion.div>

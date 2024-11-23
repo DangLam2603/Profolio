@@ -13,6 +13,11 @@ const jetBrainsMono = JetBrains_Mono({
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <meta property="og:title" content="My Portfolio" />
+        <meta property="og:image" content="/assets/IMG2.JPG" />
+      </head>
+
       <body className={`${jetBrainsMono.variable}`} suppressHydrationWarning>
         <Header />
         <StariEffect />
