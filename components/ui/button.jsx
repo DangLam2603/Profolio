@@ -10,7 +10,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-green-500 text-white shadow hover:bg-green-600 transition-all duration-300",
+          "bg-[#ffd700] text-black shadow hover:bg-[#ffed00] transition-all duration-300",
       },
       size: {
         default: "h-12 w-50 p-6 rounded-full", // Height and width equal for round shape

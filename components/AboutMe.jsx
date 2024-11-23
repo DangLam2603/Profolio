@@ -44,11 +44,11 @@ const AboutMe = ({ isActive }) => {
             smooth={true}
             duration={1000}
             offset={-100}
-            className={`border border-[#00ff99] p-2 rounded-2xl bg-transparent text-accent hover:text-white hover:bg-green-600 flex justify-center items-center gap-2 transition-opacity duration-1000 ease-in-out ${
+            className={`border border-[#ffd700] text-[#ffd700] rounded-full bg-transparent hover:text-black hover:bg-[#ffed00] p-4 flex justify-center items-center gap-2 transition-opacity duration-1000 ease-in-out ${
               isVisible ? "opacity-100" : "opacity-0"
             }`}
           >
-            <span>Tell me about it !!</span>
+            <span className="px-6">Tell me about it !!</span>
           </Button>
         </div>
       </motion.div>
@@ -61,13 +61,13 @@ const AboutMe = ({ isActive }) => {
           opacity: "100%",
         }}
         transition={{ duration: 1, delay: 1 }}
-        className="mx-auto order-2 xl:order-none text-white p-6 rounded-lg shadow-[0_0_15px_5px_rgba(0,0,0,0.3)] xl:hidden block" // xl:hidden for smaller screens
+        className="mx-auto order-2 xl:order-none text-white p-2 rounded-lg shadow-[0_0_15px_5px_rgba(0,0,0,0.3)] xl:hidden block" // xl:hidden for smaller screens
       >
         <div className="flex items-center p-3 space-x-4">
           <FaUser className="text-3xl text-accent" /> {/* Icon */}
-          <h1 className="text-3xl font-semibold text-white-800">About Me</h1>
+          <h1 className="text-3xl font-semibold text-black-800">About Me</h1>
         </div>
-        <TypingText text="Welcome!, you must be new around here. Ok, so you already know my name, but to make sure you know who I am, here is a little secret..." />
+        <TypingText text="Welcome! You must be new around here. Ok, so you already know my name, but to make sure you know who I am, here is a little secret..." />
         <div className="flex flex-col xl:flex-row gap-8 justify-end mb-6">
           <Button
             to="work"
@@ -75,12 +75,12 @@ const AboutMe = ({ isActive }) => {
             smooth={true}
             duration={1000}
             offset={-100}
-            className={`border border-[#00ff99] p-2 rounded-2xl bg-transparent text-accent hover:text-white flex justify-center items-center gap-2 transition-opacity duration-1000 ease-in-out ${
-              isVisible ? "opacity-100" : "opacity-0"
+            className={`border border-[#ffd700] p-2 rounded-full bg-transparent hover:text-black hover:bg-[#ffed00] flex justify-center items-center gap-2 transition-opacity duration-1000 ease-in-out ${
+              isVisible ? "opacity-100 visible" : "opacity-0 hidden"
             }`}
             aria-label="Learn more about me"
           >
-            <span>Tell me about it !!</span>
+            <span className="px-4">Tell me about it !!</span>
             <FaDownload />
           </Button>
         </div>

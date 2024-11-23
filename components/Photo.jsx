@@ -35,7 +35,7 @@ const Photo = ({ isActive }) => {
             cx="253" // Center the circle in the SVG
             cy="253" // Center the circle in the SVG
             r="245" // Make radius slightly smaller to fit within the image
-            stroke="#00ff99"
+            stroke="#ffd700"
             strokeWidth="4"
             strokeLinecap="round"
             initial={{ strokeDasharray: "24 10 0 0" }}
@@ -82,7 +82,7 @@ const Photo = ({ isActive }) => {
             cx="253" // Center the circle in the SVG
             cy="253" // Center the circle in the SVG
             r="245" // Make radius slightly smaller to fit within the image
-            stroke="#00ff99"
+            stroke="#ffd700"
             strokeWidth="4"
             strokeLinecap="round"
             initial={{ strokeDasharray: "24 10 0 0" }}

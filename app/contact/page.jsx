@@ -20,7 +20,7 @@ const Contact = () => {
           <div className="h-[100vh]">Contact</div>
           <div
             data-aos="fade-up"
-            className="flex flex-col border bg-slate-500 border-[#00ff99] items-center justify-between m-24 xl:pt-8 xl:pb-24"
+            className="flex flex-col border bg-slate-500 border-[#ffd700] items-center justify-between m-24 xl:pt-8 xl:pb-24"
           >
             <Image
               src="/assets/photo.png"

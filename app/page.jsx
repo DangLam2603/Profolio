@@ -47,7 +47,7 @@ export default function HomePage() {
               <div className="flex flex-col xl:flex-row items-center gap-8">
                 <Button
                   onClick={() => setIsActive(true)}
-                  className="border border-[#00ff99] bg-transparent text-accent hover:text-white flex items-center gap-2"
+                  className="border border-[#ffd700] bg-transparent text-accent hover:text-black flex items-center gap-2"
                   aria-label="Learn more about me"
                 >
                   <FaUserAlt />
@@ -73,7 +73,7 @@ export default function HomePage() {
           <>
             <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24 relative">
               {/* AboutMe component positioned absolutely */}
-              <div className="w-full z-20 relative mb-8 xl:mb-0">
+              <div className="w-full order-2 xl:order-none z-20 relative mb-8 xl:mb-0">
                 <AboutMe isActive={isActive} />
               </div>
               <div className="relative order-1 xl:order-none mb-8 xl:mb-0 z-10">
@@ -82,36 +82,37 @@ export default function HomePage() {
             </div>
 
             {/* Work Section */}
-            <div id="work" className="container h-[750vh] mb-20 ">
-              <div className="max-w-full flex xl:flex-row flex-col justify-between items-center">
+            <div
+              id="work"
+              className="container max-w-full xl:h-[800vh] h-[1000vh] my-20 xl:my-auto p-8 overflow-hidden"
+            >
+              <div className="max-w-full flex xl:flex-row flex-col justify-between items-center ">
                 <div
                   data-aos="zoom-down-right"
                   className="w-full text-white p-6 rounded-xl sm:m-6 shadow-[0_0_15px_5px_rgba(0,0,0,0.3)]"
                 >
                   <p>
-                    "I come from Vung Tau, a beautiful beach city located in
-                    Vietnam. After graduating from high school, I felt
-                    frustrated and uncertain about which subject to pursue in
-                    university. Then, I came across FPT University and decided
-                    to visit it for the first time. I was captivated by the
-                    place—its stunning architecture and the warmth of the people
-                    left a lasting impression on me. Inspired by that
-                    experience, I decided to pursue my studies as a Software
-                    Developer at FPTU"
+                    "I'm from Vung Tau, a beautiful beach city in Vietnam. After
+                    high school, I felt lost and unsure about what to study in
+                    university. One day, I decided to visit FPT University, and
+                    everything changed. The amazing architecture and the
+                    friendly atmosphere immediately drew me in. That visit
+                    inspired me to follow my passion and study Software
+                    Development at FPTU."
                   </p>
                 </div>
 
                 <div
-                  data-aos="fade-down-left"
-                  className="relative w-full mt-6 flex justify-left items-center"
+                  data-aos="fade-up"
+                  className="relative max-w-full mt-6 flex justify-left items-center "
                 >
                   <Image
                     src="/assets/BRVT.jpeg"
                     sizes="2xl"
                     priority
                     quality={100}
-                    width={500}
-                    height={500}
+                    width={700}
+                    height={700}
                     alt="photo"
                     className="object-cover object-center border-4 border-white shadow-lg"
                   />
@@ -122,7 +123,7 @@ export default function HomePage() {
               <div
                 data-aos="zoom-out-right"
                 data-aos-anchor-placement="top-center"
-                className="w-full mt-16 flex flex-wrap justify-around items-center gap-4"
+                className="max-w-full mt-16 flex flex-wrap justify-around items-center gap-4"
               >
                 <Image
                   src="/assets/graduated.jpg"
@@ -212,7 +213,7 @@ export default function HomePage() {
               </div>
               <div
                 data-aos="fade-up-left"
-                className="w-full mt-16 mb-16 flex xl:flex-row-reverse flex-col justify-between items-center"
+                className="max-w-full mt-16 mb-16 flex xl:flex-row-reverse flex-col justify-between items-center"
               >
                 <Image
                   src="/assets/mec/mec1.jpg"
