@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import "./globals.css";
 import { JetBrains_Mono } from "next/font/google";
 import Header from "@/components/Header";
@@ -14,8 +15,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dang's Profolio</title>
+        <meta name="description" content="Your website description" />
         <meta property="og:title" content="My Portfolio" />
         <meta property="og:image" content="/assets/IMG2.JPG" />
+        <meta property="og:type" content="website" />
       </head>
 
       <body className={`${jetBrainsMono.variable}`} suppressHydrationWarning>
