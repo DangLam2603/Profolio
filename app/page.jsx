@@ -88,7 +88,7 @@ export default function HomePage() {
             {/* Work Section */}
             <div
               id="work"
-              className="container max-w-full min-h-full my-20 xl:my-auto p-8 overflow-hidden"
+              className="container max-w-full my-2 xl:my-auto p-8 overflow-hidden"
               style={{
                 display: showWork ? "visible" : "hidden",
                 opacity: showWork ? 1 : 0,

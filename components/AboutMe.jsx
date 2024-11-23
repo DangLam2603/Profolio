@@ -47,7 +47,7 @@ const AboutMe = ({ isActive, onShowWork }) => {
             duration={1000}
             offset={-100}
             className={`border border-[#ffd700] text-[#ffd700] rounded-full bg-transparent  hover:bg-[#ffed00] hover:text-black p-4 flex justify-center items-center gap-2 transition-opacity duration-1000 ease-in-out ${
-              isVisible ? "opacity-100" : "opacity-0"
+              isVisible ? "opacity-100 visible" : "opacity-0 hidden"
             }`}
             onClick={onShowWork}
           >
@@ -70,7 +70,10 @@ const AboutMe = ({ isActive, onShowWork }) => {
           <FaUser className="text-3xl text-accent" /> {/* Icon */}
           <h1 className="text-3xl font-semibold text-black-800">About Me</h1>
         </div>
-        <TypingText text="Welcome! You must be new around here. Ok, so you already know my name, but to make sure you know who I am, here is a little secret..." />
+        <TypingText
+          text="Welcome! You must be new around here. Ok, so you already know my name, but to make sure you know who I am, here is a little secret..."
+          typingSpeed={50}
+        />
         <div className="flex flex-col xl:flex-row gap-8 justify-end mb-6">
           <Button
             to="work"
@@ -79,7 +82,7 @@ const AboutMe = ({ isActive, onShowWork }) => {
             duration={1000}
             offset={-100}
             className={`border border-[#ffd700] text-[#ffd700] rounded-full bg-transparent  hover:bg-[#ffed00] hover:text-black p-4 flex justify-center items-center gap-2 transition-opacity duration-1000 ease-in-out ${
-              isVisible ? "opacity-100" : "opacity-0"
+              isVisible ? "opacity-100 visible" : "opacity-0 hidden"
             }`}
             onClick={onShowWork}
           >
