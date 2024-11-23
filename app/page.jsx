@@ -84,7 +84,7 @@ export default function HomePage() {
             {/* Work Section */}
             <div
               id="work"
-              className="container max-w-full xl:h-[800vh] h-[1000vh] my-20 xl:my-auto p-8 overflow-hidden"
+              className="container max-w-full min-h-full my-20 xl:my-auto p-8 overflow-hidden"
             >
               <div className="max-w-full flex xl:flex-row flex-col justify-between items-center ">
                 <div
