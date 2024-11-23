@@ -79,7 +79,9 @@ const AboutMe = ({ isActive }) => {
             }`}
             aria-label="Learn more about me"
           >
-            <span className="px-4 text-accent">Tell me about it !!</span>
+            <span className="px-4 text-accent hover:text-black">
+              Tell me about it !!
+            </span>
           </Button>
         </div>
       </motion.div>
