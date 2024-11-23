@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
         <title>Dang's Profolio</title>
         <meta name="description" content="Your website description" />
         <meta property="og:title" content="My Portfolio" />
-        <meta property="og:image" content="/assets/IMG2.JPG" />
+        <meta property="og:image" content="/assets/thumb.jpg" />
         <meta property="og:type" content="website" />
       </head>
 

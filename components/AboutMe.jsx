@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { FaUser } from "react-icons/fa"; // Importing an icon from react-icons
 import { Button } from "react-scroll";
 import TypingText from "./TypingText";
-const AboutMe = ({ isActive }) => {
+const AboutMe = ({ isActive, onShowWork }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -34,7 +34,10 @@ const AboutMe = ({ isActive }) => {
           <h1 className="text-3xl font-bold text-white-800">About Me</h1>
         </div>
 
-        <TypingText text="Welcome!, you must be new around here. Ok, so you already know my name, but to make sure you know who I am, here is a little secret..." />
+        <TypingText
+          text="Welcome!, you must be new around here. Ok, so you already know my name, but to make sure you know who I am, here is a little secret..."
+          typingSpeed={50}
+        />
 
         <div className="flex flex-col xl:flex-row gap-8 justify-end mb-6">
           <Button
@@ -46,6 +49,7 @@ const AboutMe = ({ isActive }) => {
             className={`border border-[#ffd700] text-[#ffd700] rounded-full bg-transparent  hover:bg-[#ffed00] hover:text-black p-4 flex justify-center items-center gap-2 transition-opacity duration-1000 ease-in-out ${
               isVisible ? "opacity-100" : "opacity-0"
             }`}
+            onClick={onShowWork}
           >
             <span className="px-6">Tell me about it !!</span>
           </Button>
@@ -77,6 +81,7 @@ const AboutMe = ({ isActive }) => {
             className={`border border-[#ffd700] text-[#ffd700] rounded-full bg-transparent  hover:bg-[#ffed00] hover:text-black p-4 flex justify-center items-center gap-2 transition-opacity duration-1000 ease-in-out ${
               isVisible ? "opacity-100" : "opacity-0"
             }`}
+            onClick={onShowWork}
           >
             <span className="px-6">Tell me about it !!</span>
           </Button>

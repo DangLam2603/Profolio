@@ -14,7 +14,11 @@ import Image from "next/image";
 
 export default function HomePage() {
   const [isActive, setIsActive] = useState(false);
+  const [showWork, setShowWork] = useState(false); // State to control visibility
 
+  const handleShowWork = () => {
+    setShowWork(true); // Update state to show the Work section
+  };
   useEffect(() => {
     document.body.classList.add("overflow-x-hidden");
     AOS.init({
@@ -74,7 +78,7 @@ export default function HomePage() {
             <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24 relative">
               {/* AboutMe component positioned absolutely */}
               <div className="w-full order-2 xl:order-none z-20 relative mb-8 xl:mb-0">
-                <AboutMe isActive={isActive} />
+                <AboutMe onShowWork={handleShowWork} isActive={isActive} />
               </div>
               <div className="relative order-1 xl:order-none mb-8 xl:mb-0 z-10">
                 <Photo isActive={isActive} />
@@ -85,11 +89,16 @@ export default function HomePage() {
             <div
               id="work"
               className="container max-w-full min-h-full my-20 xl:my-auto p-8 overflow-hidden"
+              style={{
+                display: showWork ? "visible" : "hidden",
+                opacity: showWork ? 1 : 0,
+                transition: "opacity 0.5s ease-in-out",
+              }}
             >
               <div className="max-w-full flex xl:flex-row flex-col justify-between items-center ">
                 <div
                   data-aos="zoom-down-right"
-                  className="w-full text-white p-6 rounded-xl sm:m-6 shadow-[0_0_15px_5px_rgba(0,0,0,0.3)]"
+                  className="w-full text-white p-6 m-6 rounded-xl shadow-[0_0_15px_5px_rgba(0,0,0,0.3)]"
                 >
                   <p>
                     "I'm from Vung Tau, a beautiful beach city in Vietnam. After
@@ -104,7 +113,7 @@ export default function HomePage() {
 
                 <div
                   data-aos="fade-up"
-                  className="relative max-w-full mt-6 flex justify-left items-center "
+                  className="relative max-w-full flex justify-left items-center "
                 >
                   <Image
                     src="/assets/BRVT.jpeg"
@@ -300,7 +309,7 @@ export default function HomePage() {
               <br />
               <div
                 data-aos="fade-up"
-                className="xl:relative flex xl:flex-row flex-col m-2 justify-center items-center"
+                className="xl:relative xl:min-h-[80vh] flex xl:flex-row flex-col m-2 justify-center items-center"
               >
                 <Image
                   src="/assets/mec/top.JPG"
@@ -322,9 +331,9 @@ export default function HomePage() {
                   alt="photo"
                   className="xl:absolute block top-60 right-24 object-cover object-center border-4 border-white shadow-lg transform rotate-6"
                 />
-                <div className="p-10 w-full flex justify-end items-end">
-                  What's Next ... ?!!
-                </div>
+              </div>
+              <div className="p-10  w-full max-h-full flex justify-end items-end">
+                What's Next ... ?!!
               </div>
             </div>
           </>
