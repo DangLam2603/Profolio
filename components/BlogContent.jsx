@@ -41,7 +41,7 @@ export default function BlogContent({
                     <img
                       src={img}
                       alt={imgAlt || title || `Image ${index + 1}`}
-                      className="w-full h-[30rem] object-cover rounded-lg"
+                      className="w-full xl:h-[30rem] h-[15rem] object-cover rounded-lg"
                     />
                     {notes[index] && (
                       <div className="flex justify-center items-center italic text-sm text-gray-500 mt-4">
