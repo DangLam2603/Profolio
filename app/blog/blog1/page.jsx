@@ -22,15 +22,20 @@ const blog1 = () => {
           imgSrc={["/assets/thumb.jpg"]}
           ImgNote={["1st blog"]}
         >
-          If you reading this blog right now, i assume you have go though all
-          the website. For those who don't know that i was born in a educated
-          family, my mom is a literature teacher. So i thought it would be
-          awsome to write something to share with friends. Starting with this
-          blog.
+          <h1 className="text-3xl font-bold mb-4">Hello World!</h1>
+          <p>
+            If you reading this blog right now, i assume you have go though all
+            the website. For those who don't know that i was born in a educated
+            family, my mom is a literature teacher. So i thought it would be
+            awsome to write something to share with friends. Starting with this
+            blog.
+          </p>
           <br />
-          <br />
-          This should be a good start to my writing journey. Once again, thank
-          you for visiting my website. I hope you have a nice day !!
+          <p>
+            This should be a good start to my writing journey. Once again, thank
+            you for visiting my website. I hope you have a nice day !!
+          </p>
+
           <br />
           <br />
         </BlogContent>

@@ -17,7 +17,7 @@ const blog2 = () => {
       <div className="conatiner mx-auto">
         <BlogContent
           title={"Explore My Own Website"}
-          date={"11/26/2024"}
+          date={"November 26, 2024"}
           imgAlt={"my personal website"}
           imgSrc={["/assets/blog2.png", "/assets/cm.jpg"]}
           ImgNote={[
@@ -36,7 +36,7 @@ const blog2 = () => {
           <br />
           <h1 className="text-3xl font-bold mb-4">What's next?</h1>
           <p>
-            With the basic login i learn through university, i was able to start
+            With the basic logic i learn through university, i was able to start
             a NextJs project. And that was the beginning of my portfolio
             website. At first i through it's just basic React with fancy UI, but
             i was wrong. It was pain in the ass to learn Hook and how to get

@@ -11,9 +11,9 @@ const Blog = () => {
         opacity: 1,
         transition: { duration: 0.5, delay: 1, ease: "easeInOut" },
       }}
-      className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
+      className="min-h-[80vh] flex items-center justify-center mx-4 py-12 xl:py-0"
     >
-      <div className="container mx-auto">
+      <div className="container mx-auto my-4 p-4 xl:my-0 xl:py-0">
         <Link href="/blog/blog1">
           <BlockCard
             isRight={false}
