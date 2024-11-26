@@ -129,7 +129,7 @@ const PersonalData = {
     },
     {
       icon: <FaAws />,
-      name: "AWS",
+      name: "Amazon Web Services",
     },
   ],
 };
