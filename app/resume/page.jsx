@@ -31,7 +31,7 @@ const Resume = () => {
           defaultValue="experience"
           className="flex flex-col justify-center xl:flex-row gap-[60px]"
         >
-          <TabsList className="flex flex-col justify-start w-full xl:w-1/3">
+          <TabsList className="flex flex-col justify-center w-full xl:w-1/3">
             <TabsTrigger
               value="experience"
               className="px-4 py-2 rounded-lg text-lg font-medium transition-all ease-in-out hover:bg-[#ffd700] hover:text-black"

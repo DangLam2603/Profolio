@@ -30,31 +30,30 @@ export default function BlockCard({
       <div
         className={`
           w-full
-          flex flex-col xl:flex-row
+          flex flex-col 
           shadow-[0_0_15px_5px_rgba(0,0,0,0.3)]
           hover:shadow-[0_0_20px_10px_rgba(0,0,0,0.4)]
           rounded-xl
           overflow-hidden
-          bg-opacity-90
+          bg-opacity-100
           transform transition-all duration-300 ease-in-out 
           hover:scale-105
-          ${isRight ? "xl:flex-row-reverse" : ""}
+          ${isRight ? "flex-col-reverse" : ""}
         `}
       >
         {/* Image Section */}
         {imgSrc && (
-          <div className="flex items-center justify-center p-4 sm:p-8 xl:w-1/2 bg-white opacity-4 ">
+          <div className="flex items-center justify-center bg-white opacity-4 ">
             <img
               src={imgSrc}
               alt={imgAlt || title}
-              className="h-48 sm:h-64 xl:h-96 w-full object-contain 
-                        opacity-90 hover:opacity-100 transition-opacity duration-300"
+              className="h-48 sm:h-64 xl:h-96 w-full object-cover opacity-100"
             />
           </div>
         )}
 
         {/* Content Section */}
-        <div className="w-full p-4 sm:p-6 flex flex-col justify-center xl:w-1/2">
+        <div className="w-full p-4 sm:p-6 flex flex-col justify-center">
           {/* Header Section */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-4">
             <div className="w-full sm:w-2/3">
