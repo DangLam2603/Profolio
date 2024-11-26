@@ -27,7 +27,7 @@ const Blog = () => {
           />
         </Link>
 
-        <div className="w-full flex xl:flex-row flex-col justify-center items-center">
+        <div className="w-full flex xl:flex-row flex-col justify-between gap-8 items-center">
           <BlockCard
             isRight={false}
             content={"Hi this is my first blog"}

@@ -18,11 +18,9 @@ export default function BlockCard({
   tags = [],
   links = [],
 }) {
-  const [isMore, setIsMore] = useState(false);
-  const shortContent = content.substring(0, 110);
   return (
     <motion.div
-      className="w-full m-4 p-8"
+      className="w-full my-8"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5, delay: 1, ease: "easeInOut" }}
@@ -38,6 +36,7 @@ export default function BlockCard({
           bg-opacity-100
           transform transition-all duration-300 ease-in-out 
           hover:scale-105
+          
           ${isRight ? "flex-col-reverse" : ""}
         `}
       >
@@ -83,27 +82,10 @@ export default function BlockCard({
 
           {/* Content */}
           <p className="text-base sm:text-lg text-gray-100 mb-4 leading-relaxed">
-            {isMore ? (
-              <>
-                {content}{" "}
-                <button
-                  onClick={() => setIsMore(false)}
-                  className="text-accent font-medium hover:underline "
-                >
-                  Read Less
-                </button>
-              </>
-            ) : (
-              <>
-                {shortContent}...{" "}
-                <button
-                  onClick={() => setIsMore(true)}
-                  className="text-accent font-medium hover:underline"
-                >
-                  Read More
-                </button>
-              </>
-            )}
+            {content}...
+            <button className="text-accent font-medium hover:underline">
+              Read More
+            </button>
           </p>
 
           {/* Footer Section */}
