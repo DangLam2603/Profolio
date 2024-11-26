@@ -23,7 +23,7 @@ const Skills = () => {
             <li key={index}>
               <TooltipProvider delayDuration={100}>
                 <Tooltip>
-                  <TooltipTrigger className="w-full h-[130px] bg-[#232329] rounded-xl flex items-center justify-center group">
+                  <TooltipTrigger className="w-full h-[100px] bg-[#232329] rounded-xl flex items-center justify-center group">
                     <div className="text-5xl group-hover:text-accent transition-all duration-300">
                       {skill.icon}
                     </div>
