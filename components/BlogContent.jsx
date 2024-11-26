@@ -18,7 +18,6 @@ export default function BlogContent({
   imgSrc = [],
   imgAlt = "",
   ImgNote = [],
-  tags = [],
 }) {
   // Ensure imgSrc is treated as an array
   const images = Array.isArray(imgSrc) ? imgSrc : [imgSrc];
@@ -48,7 +47,7 @@ export default function BlogContent({
                   <img
                     src={img}
                     alt={imgAlt || title || `Image ${index + 1}`}
-                    className="w-full xl:h-[30rem] h-[15rem] object-cover rounded-lg"
+                    className="w-full xl:h-[30rem] h-[15rem] object-contain rounded-lg"
                   />
                   {notes[index] && (
                     <div className="flex justify-center items-center italic text-sm text-gray-500 mt-4">
@@ -81,9 +80,9 @@ export default function BlogContent({
         </div>
       </div>
       {/* Content */}
-      <p className="text-base sm:text-lg text-gray-200 my-8 leading-relaxed">
+      <div className="text-base sm:text-lg text-gray-200 my-8 leading-relaxed">
         {children}
-      </p>
+      </div>
     </motion.div>
   );
 }

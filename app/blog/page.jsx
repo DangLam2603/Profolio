@@ -17,37 +17,37 @@ const Blog = () => {
         <Link href="/blog/blog1">
           <BlockCard
             isRight={false}
-            content={"Hi this is my first blog"}
+            content={"Hi this is my first blog, let's check it out !!"}
             title={"My First Blog"}
             date={"Nov 2024"}
             imgAlt={"1st blog image"}
             imgSrc={"/assets/thumb.jpg"}
-            links={""}
-            tags={""}
           />
         </Link>
 
-        <div className="w-full flex xl:flex-row flex-col justify-between gap-8 items-center">
-          <BlockCard
-            isRight={false}
-            content={"Hi this is my first blog"}
-            title={"My First Blog"}
-            date={"Nov 2024"}
-            imgAlt={"1st blog image"}
-            imgSrc={"/assets/thumb.jpg"}
-            links={""}
-            tags={""}
-          />{" "}
-          <BlockCard
-            isRight={false}
-            content={"Hi this is my first blog"}
-            title={"My First Blog"}
-            date={"Nov 2024"}
-            imgAlt={"1st blog image"}
-            imgSrc={"/assets/thumb.jpg"}
-            links={""}
-            tags={""}
-          />
+        <div className="w-full grid xl:grid-cols-2 gap-8">
+          <Link href="/blog/blog2">
+            <BlockCard
+              content={"From a dream to ideas and ended with reality"}
+              title={"Explore My Own Website"}
+              date={"Nov 2024"}
+              imgAlt={"2st blog image"}
+              imgSrc={"/assets/blog2.png"}
+              links={""}
+              tags={""}
+            />
+          </Link>
+
+          <Link href="/blog/blog1">
+            <BlockCard
+              isRight={false}
+              content={"Hi this is my first blog, let's check it out!"}
+              title={"My First Blog"}
+              date={"Nov 2024"}
+              imgAlt={"1st blog image"}
+              imgSrc={"/assets/thumb.jpg"}
+            />
+          </Link>
         </div>
       </div>
     </motion.div>
