@@ -4,7 +4,7 @@ import Timeline from "../Timeline";
 import TypingText from "../TypingText";
 const Achievement = () => {
   return (
-    <div className="flex flex-col gap-4 w-full text-white">
+    <div className="flex flex-col w-full text-white">
       <h1 className="text-3xl p-2 font-bold">Achievement</h1>
       <TypingText text="Awards and Certifications: They may be few, but each is truly invaluable." />
       <Timeline

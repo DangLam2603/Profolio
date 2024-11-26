@@ -5,7 +5,7 @@ import TypingText from "../TypingText";
 
 const Educatiuon = () => {
   return (
-    <div className="flex flex-col gap-4 w-full text-white">
+    <div className="flex flex-col w-full text-white">
       <h1 className="p-2 text-3xl font-bold">Educatiuon</h1>
       <TypingText text="The Journey i have passed, and the Knowledge i have acquired" />
       <Timeline

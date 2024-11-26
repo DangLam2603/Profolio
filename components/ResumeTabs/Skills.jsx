@@ -10,14 +10,14 @@ import {
 } from "../ui/tooltip";
 const Skills = () => {
   return (
-    <div className="flex flex-col gap-4 w-full text-white">
+    <div className="flex flex-col w-full text-white">
       <h1 className="p-2 text-3xl font-bold">Skills</h1>
       <TypingText
         text={
           "'Skill is the unified force of experience, intellect, and passion in their operation' – John Ruskin"
         }
       />
-      <ul className="grid grid-cols-2 sm:grid-col-3 md:grid-cols-4 gap-[30px]">
+      <ul className="grid grid-cols-2 mt-2 sm:grid-col-3 md:grid-cols-4 gap-[30px]">
         {PersonalData.Skills.map((skill, index) => {
           return (
             <li key={index}>
