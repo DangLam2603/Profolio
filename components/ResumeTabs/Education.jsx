@@ -7,7 +7,7 @@ const Educatiuon = () => {
   return (
     <div className="flex flex-col gap-4 w-full text-white">
       <h1 className="p-2 text-3xl font-bold">Educatiuon</h1>
-      <TypingText text="This is the education section , here you can see my education details" />
+      <TypingText text="The Journey i have passed, and the Knowledge i have acquired" />
       <Timeline
         year={"2021-2024"}
         title={PersonalData.Education[1].Institution}

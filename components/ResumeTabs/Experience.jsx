@@ -6,7 +6,7 @@ const Experience = () => {
   return (
     <div className="flex flex-col gap-4 w-full text-white">
       <h1 className="p-2 text-3xl font-bold">Experience</h1>
-      <TypingText text="This is the experience section , here you can see my experience" />
+      <TypingText text="Welcome to the experience section, where you can explore my professional background." />
       <Timeline
         year={"2023"}
         title={PersonalData.Experience[0].Company}
