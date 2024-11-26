@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { ToastContainer, toast, Bounce } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import Swal from "sweetalert2";
 const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -33,29 +33,21 @@ const Contact = () => {
       const result = await response.json();
 
       if (result.success) {
-        toast.success("Message sent successfully!", {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "colored",
+        Swal.fire({
+          title: "Message Sent Successfully!",
+          text: "Grateful for the opportunity to connect. Let's create something amazing together!",
+          icon: "success",
         });
+
         setName("");
         setEmail("");
         setMessage("");
       } else {
-        toast.error("Failed to send message. Please try again.", {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "colored",
+        Swal.fire({
+          title: "Error!",
+          text: "Failed to send message. Please try again",
+          icon: "error",
+          confirmButtonText: "Try Again",
         });
       }
     } catch (error) {
@@ -152,17 +144,6 @@ const Contact = () => {
             </button>
           </form>
         </div>
-
-        <ToastContainer
-          position="top-right"
-          autoClose={5000}
-          hideProgressBar={false}
-          closeOnClick
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-          theme="colored"
-        />
       </div>
     </section>
   );
