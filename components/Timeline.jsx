@@ -23,7 +23,7 @@ const Timeline = ({ year, title, company, description }) => {
             <p className="text-lg font-semibold text-gray-400 mb-2">
               {item.company}
             </p>
-            <p className="text-[15px]">{item.description}</p>
+            <p className="text-base">{item.description}</p>
           </div>
         </div>
       ))}
