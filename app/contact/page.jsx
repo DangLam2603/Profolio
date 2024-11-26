@@ -1,7 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
 import React, { useState } from "react";
-import { ToastContainer, toast, Bounce } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Swal from "sweetalert2";
 const Contact = () => {
@@ -37,6 +36,13 @@ const Contact = () => {
           title: "Message Sent Successfully!",
           text: "Grateful for the opportunity to connect. Let's create something amazing together!",
           icon: "success",
+          customClass: {
+            popup: "bg-gray-700 text-white rounded-lg shadow-lg",
+            title: "text-2xl font-bold text-green-400",
+            content: "text-base text-gray-300",
+            confirmButton:
+              "bg-[#ffd700] hover:bg-green-600 text-white font-medium py-2 px-10 rounded mt-4",
+          },
         });
 
         setName("");
@@ -51,17 +57,6 @@ const Contact = () => {
         });
       }
     } catch (error) {
-      toast.error("An error occurred. Please try again.", {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "colored",
-        transition: Bounce,
-      });
       console.error("Submission error:", error);
     } finally {
       setIsSubmitting(false);
@@ -69,9 +64,9 @@ const Contact = () => {
   };
 
   return (
-    <section className="h-full py-10">
+    <section className="h-full">
       <div className="container mx-auto px-4 md:px-8">
-        <div className="rounded-xl shadow-[0_0_15px_5px_rgba(0,0,0,0.3)] p-6 md:p-10 max-w-3xl mx-auto">
+        <div className="rounded-xl shadow-[0_0_15px_5px_rgba(0,0,0,0.3)] p-4 md:p-10 max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-6 text-center">
             Let's Connect!!
           </h2>
