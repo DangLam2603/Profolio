@@ -10,7 +10,7 @@ const AboutMe = ({ isActive, onShowWork }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true); // Make button visible after 2s
-    }, 10000);
+    }, 6000);
 
     // Cleanup timer if the component is unmounted
     return () => clearTimeout(timer);
@@ -36,10 +36,11 @@ const AboutMe = ({ isActive, onShowWork }) => {
 
         <TypingText
           text="Welcome!, you must be new around here. Ok, so you already know my name, but to make sure you know who I am, here is a little secret..."
-          typingSpeed={50}
+          typingSpeed={30}
+          delay={1000}
         />
 
-        <div className="flex flex-col xl:flex-row gap-8 justify-end mb-6">
+        <div className="flex flex-col xl:flex-row gap-8 justify-end my-6">
           <Button
             to="work"
             spy={true}
@@ -72,9 +73,10 @@ const AboutMe = ({ isActive, onShowWork }) => {
         </div>
         <TypingText
           text="Welcome! You must be new around here. Ok, so you already know my name, but to make sure you know who I am, here is a little secret..."
-          typingSpeed={50}
+          typingSpeed={30}
+          delay={1000}
         />
-        <div className="flex flex-col xl:flex-row gap-8 justify-end mb-6">
+        <div className="flex flex-col xl:flex-row gap-8 justify-end my-6">
           <Button
             to="work"
             spy={true}

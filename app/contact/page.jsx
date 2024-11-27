@@ -9,6 +9,8 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  const accessKey = process.env.NEXT_PUBLIC_ACCESS_KEY;
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -21,7 +23,7 @@ const Contact = () => {
           Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key: "70fc9f3c-a1e8-43a4-b540-5cd6807cdbda", // Replace with your real access key
+          access_key: accessKey,
           name: name,
           email: email,
           message: message,
@@ -66,7 +68,7 @@ const Contact = () => {
   return (
     <section className="h-full my-8 py-2">
       <div className="container mx-auto px-4 md:px-8">
-        <div className="rounded-xl shadow-[0_0_15px_5px_rgba(0,0,0,0.3)] p-4 md:p-10 max-w-3xl mx-auto">
+        <div className="rounded-xl shadow-[0_0_15px_5px_rgba(0,0,0,0.3)] p-6 xl:p-10 max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-6 text-center">
             Let's Connect!!
           </h2>
