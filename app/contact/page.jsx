@@ -66,7 +66,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="h-full my-8 py-2">
+    <section className="h-full my-6 py-2">
       <div className="container mx-auto px-4 md:px-8">
         <div className="rounded-xl shadow-[0_0_15px_5px_rgba(0,0,0,0.3)] p-6 xl:p-10 max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-6 text-center">
