@@ -5,6 +5,8 @@ import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
 import StariEffect from "@/components/StariEffect";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+
 const jetBrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
@@ -17,7 +19,7 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Dang's Profolio</title>
+        <title>Dang's Portfolio</title>
         <meta name="description" content="Your website description" />
         <meta property="og:title" content="My Portfolio" />
         <meta property="og:image" content="/assets/thumb.jpg" />
@@ -27,10 +29,9 @@ export default function RootLayout({ children }) {
       <body className={`${jetBrainsMono.variable}`} suppressHydrationWarning>
         <Header />
         <StariEffect />
-        <PageTransition>
-          {children}
-          <Analytics />
-        </PageTransition>
+        <PageTransition>{children}</PageTransition>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
