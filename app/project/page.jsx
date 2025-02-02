@@ -16,7 +16,7 @@ const Projects = () => {
             tags={["React", "Tailwind", ".NET 8", "Azure"]}
             links={[
               {
-                href: "https://github.com/CKS-166/Fun-And-Funding-Api",
+                href: "https://github.com/DangLam2603/FunAndFunding",
                 label: "GitHub",
               },
             ]}
